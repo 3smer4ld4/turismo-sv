@@ -8,15 +8,17 @@ class Destino
 {
     public static function todos(): array
     {
-        $ruta = 'data/destinos.json';
+        $ruta = storage_path('app/data/destinos.json');
 
-        if (!Storage::disk('local')->exists($ruta)) {
+        if (!file_exists($ruta)) {
             return [];
         }
 
-        $contenido = Storage::disk('local')->get($ruta);
+        $contenido = file_get_contents($ruta);
 
-        return json_decode($contenido, true) ?? [];
+        $destinos = json_decode($contenido, true);
+
+        return is_array($destinos) ? $destinos : [];
     }
 
     public static function buscarPorId(int $id): ?array
