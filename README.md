@@ -22,37 +22,38 @@ Aplicacion web desarrollada con laravel, que permite explorar destinos turistico
 
 ## Pasos:
 
-1.- Clonar el repositorio:
-
-git clone URL_DE_TU_REPOSITORIO
+**1. Clonar el repositorio:**
+```
+git clone [https://github.com/3smer4ld4/turismo-sv.git]
 cd turismo-sv
+```
 
-Instalar las dependencias:
+**2. Instalar las dependencias:**
 
-composer install
+`composer install`
 
-Crear el archivo de configuración local .env en Windows PowerShell:
+**3. Crear el archivo de configuración local .env en Windows PowerShell:**
 
 Copy-Item .env.example .env
 
-Generar la clave de la aplicación:
+**4. Generar la clave de la aplicación:**
 
-php artisan key:generate
+`php artisan key:generate`
 
-Verificar que existan los archivos de datos:
+**5. Verificar que existan los archivos de datos:**
 
 storage/app/data/destinos.json
 
 storage/app/data/contactos.json
 
-El archivo contactos.json debe contener inicialmente un arreglo JSON vacío:
+**6. El archivo contactos.json debe contener inicialmente un arreglo JSON vacío:**
 
 []
 
-Iniciar el servidor de desarrollo:
+**7. Iniciar el servidor de desarrollo:**
 
-php artisan serve
+`php artisan serve`
 
-Abrir la dirección indicada por Laravel, normalmente:
+**8. Abrir la dirección indicada por Laravel, normalmente:**
 
-http://127.0.0.1:8000
+`http://127.0.0.1:8000`
